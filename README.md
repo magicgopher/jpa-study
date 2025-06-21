@@ -2,7 +2,7 @@
 
 ## ✨仓库结构
 
-- [jpa-demo01【这是jpa在maven工程基于xml的配置案例】](https://github.com/magicgopher/jpa-study/jpa-demo01/)
+- [jpa-demo01【这是jpa在maven工程基于xml的配置案例】](https://github.com/magicgopher/jpa-study/tree/main/jpa-demo01)
 
 ## ✨学习内容概览
 
