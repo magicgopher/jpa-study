@@ -62,3 +62,7 @@ build/
 
 # 字节码文件
 **/*.class
+
+# 忽略 gradle 工程目录
+**/.gradle
+**/build
