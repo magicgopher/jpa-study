@@ -45,7 +45,7 @@ public class SpringDataJpaTest {
      * 保存操作
      */
     @Test
-    void save() {
+    void saveTest() {
         User user = new User("刘美美", 22, "女");
         System.out.println("保存操作的用户信息:" + user);
         User saveUserInfo = userRepository.save(user);
@@ -57,7 +57,7 @@ public class SpringDataJpaTest {
      * SQL的COUNT()函数
      */
     @Test
-    void count() {
+    void countTest() {
         long count = userRepository.count();
         System.out.println("tb_user表数有：" + count + "条数据");
     }
@@ -66,7 +66,7 @@ public class SpringDataJpaTest {
      * 更新操作
      */
     @Test
-    void update() {
+    void updateTest() {
         // 查询出用户信息
         User user = userRepository.findById(8L).orElseThrow(() -> new RuntimeException("查询的用户信息不存在！"));
         System.out.println("更新前用户信息:" + user);
@@ -83,7 +83,7 @@ public class SpringDataJpaTest {
      * 根据id删除
      */
     @Test
-    void deleteById() {
+    void deleteByIdTest() {
         userRepository.deleteById(58L);
     }
 
@@ -91,7 +91,7 @@ public class SpringDataJpaTest {
      * 根据多个id删除
      */
     @Test
-    void deleteAllById() {
+    void deleteAllByIdTest() {
         LinkedList<Long> ids = new LinkedList<>();
         ids.add(21L);
         ids.add(22L);
@@ -105,7 +105,7 @@ public class SpringDataJpaTest {
      * 删除所有
      */
     @Test
-    void deleteAll() {
+    void deleteAllTest() {
         userRepository.deleteAll();
     }
 
@@ -113,7 +113,7 @@ public class SpringDataJpaTest {
      * 根据实体删除
      */
     @Test
-    void delete() {
+    void deleteTest() {
         // 当您调用delete(T entity)并传递一个实体时，不需要该实体的所有属性都匹配才能进行删除。
         // 工作原理：Spring Data JPA 使用实体的主键delete（或标识符）执行删除操作。
         // 当您向该方法提供实体对象时，Spring Data JPA 会从该实体中提取 ID。
