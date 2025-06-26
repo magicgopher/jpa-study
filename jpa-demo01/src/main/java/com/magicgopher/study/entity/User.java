@@ -15,16 +15,16 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 这里设置主键由数据库自动生成，通常是自增长的。
     @Column(name = "id")
-    private Long Id;
+    private Long id;
 
     @Column(name = "name")
-    private String Name;
+    private String name;
 
     @Column(name = "age")
-    private Integer Age;
+    private Integer age;
 
     @Column(name = "sex")
-    private String Sex;
+    private String sex;
 
     /**
      * 空参构造方法
@@ -34,55 +34,56 @@ public class User {
 
     /**
      * 有参数构造方法
+     *
      * @param name 姓名
-     * @param age 年龄
-     * @param sex 性别
+     * @param age  年龄
+     * @param sex  性别
      */
     public User(String name, Integer age, String sex) {
-        Name = name;
-        Age = age;
-        Sex = sex;
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public Integer getAge() {
-        return Age;
+        return age;
     }
 
     public void setAge(Integer age) {
-        Age = age;
+        this.age = age;
     }
 
     public String getSex() {
-        return Sex;
+        return sex;
     }
 
     public void setSex(String sex) {
-        Sex = sex;
+        this.sex = sex;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "Id=" + Id +
-                ", Name='" + Name + '\'' +
-                ", Age=" + Age +
-                ", Sex='" + Sex + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", sex='" + sex + '\'' +
                 '}';
     }
 }
