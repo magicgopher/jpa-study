@@ -25,7 +25,7 @@ class JpaDemo03ApplicationTests {
      * 查询所有
      */
     @Test
-    void findAll() {
+    void findAllTest() {
         Iterable<User> users = userRepository.findAll();
         users.forEach(System.out::println);
     }
@@ -34,7 +34,7 @@ class JpaDemo03ApplicationTests {
      * 根据id查询
      */
     @Test
-    void findById() {
+    void findByIdTest() {
         // 使用 orElse 查询到不存在的用户信息，直接返回一个默认的User实例
         User user1 = userRepository.findById(111L).orElse(new User());
         System.out.println(user1);
@@ -46,7 +46,7 @@ class JpaDemo03ApplicationTests {
      * 保存操作
      */
     @Test
-    void save() {
+    void saveTest() {
         User user = new User("伍六七", 20, "男");
         System.out.println("保存操作的用户信息:" + user);
         User saveUserInfo = userRepository.save(user);
@@ -57,7 +57,7 @@ class JpaDemo03ApplicationTests {
      * 根据id删除
      */
     @Test
-    void deleteById() {
+    void deleteByIdTest() {
         try {
             userRepository.deleteById(50L);
             // 如果没有异常，验证记录是否已被删除
